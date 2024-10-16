@@ -1,0 +1,42 @@
+/* Home.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Make the container full height */
+    color: white; /* Text color */
+    width: 100%;
+    background-image: url('../../Images/premium_photo-1683309565422-77818a287060.jpeg'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    position: relative; /* Position for gradient overlay */
+    overflow: hidden; /* Hide overflow */
+}
+
+.gradient-overlay {
+    position: absolute; /* Positioning for gradient */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black gradient overlay with transparency */
+}
+
+h1 {
+    opacity: 0; /* Start with text invisible */
+    animation: fadeIn 2s forwards; /* Fade-in animation */
+    animation-delay: 1s; /* Delay before animation starts */
+}
+
+p {
+    opacity: 0; /* Start with text invisible */
+    animation: fadeIn 2s forwards; /* Fade-in animation */
+    animation-delay: 3s; /* Delay before animation starts */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Fade to fully visible */
+    }
+}
