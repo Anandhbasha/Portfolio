@@ -1,5 +1,5 @@
 .btn-info {
-    background-color: #17a2b8; /* Info color */
+    background-color: #ff6f61; /* Info color */
     color: white; /* Text color */
     border: none; /* Remove default border */
     border-radius: 5px; /* Rounded corners */
@@ -10,7 +10,7 @@
 }
 
 .btn-info:hover {
-    background-color: #0f6b66; /* Darker shade on hover */
+    background-color: #008080; /* Darker shade on hover */
     transform: scale(1.05); /* Slightly enlarge the button */
 }
 
