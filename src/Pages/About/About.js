@@ -1,42 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './About.css';
 import ExperienceCard from '../../Components/ExperienceCard/ExperienceCard';
+import SkillBar from '../../Components/SkillBar/SkillBar';
 
-const SkillBar = ({ skill, percentage }) => {
-    const [currentPercentage, setCurrentPercentage] = useState(0);
 
-    useEffect(() => {
-        setCurrentPercentage(0);
-        const animationDuration = 1000; 
-        const incrementTime = 10; 
-        const incrementAmount = Math.ceil(percentage / (animationDuration / incrementTime)); 
-        const interval = setInterval(() => {
-            setCurrentPercentage(prev => {
-                if (prev + incrementAmount >= percentage) {
-                    clearInterval(interval);
-                    return percentage; 
-                }
-                return prev + incrementAmount; 
-            });
-        }, incrementTime);
-
-        return () => clearInterval(interval); 
-    }, [percentage]);
-
-    return (
-        <div className="skill-bar">
-            <div className="skill-name">{skill}</div>
-            <div className="progress">
-                <div
-                    className="progress-done"
-                    style={{ width: `${currentPercentage}%` }}
-                />
-                {/* Position percentage text above the bar */}
-                <div className="progress-text">{currentPercentage}%</div>
-            </div>
-        </div>
-    );
-};
 
 const About = () => {
     const jobs = [
@@ -149,15 +116,9 @@ const About = () => {
 
     return (
         <div className="about-container">
-            <h1>About Me</h1>
+            <h1 className='Heading'>About Me</h1>
             <div className="about-content">
-                <div className="skills-container">
-                    <h2>Skills</h2>
-                    {skills.map((skill, index) => (
-                        <SkillBar key={index} skill={skill.name} percentage={skill.percentage} />
-                    ))}
-                </div>
-                <div className="experience-container">
+            <div className="experience-container">
                     <h2>Experience</h2>
                     <div className="cards-container">
                         {jobs.map((job, index) => (
@@ -165,6 +126,13 @@ const About = () => {
                         ))}
                     </div>
                 </div>
+                <div className="skills-container">
+                    <h2>Skills</h2>
+                    {skills.map((skill, index) => (
+                        <SkillBar key={index} skill={skill.name} percentage={skill.percentage} />
+                    ))}
+                </div>
+                
             </div>
         </div>
     );

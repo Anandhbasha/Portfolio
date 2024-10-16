@@ -27,7 +27,7 @@ const ExperienceCard = ({ job }) => {
                 <li key={index}>{point}</li>
               ))}
         </ul>
-        <button className="read-more" onClick={toggleExpanded}>
+        <button className="read-more btn-info" onClick={toggleExpanded}>
           {expanded ? 'Read Less' : 'Read More'}
         </button>
       </div>

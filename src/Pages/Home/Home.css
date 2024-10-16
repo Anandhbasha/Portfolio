@@ -43,27 +43,13 @@
         background-position: center; /* Centers the image within the container */
         color: white; /* Sets the text color to white */
         text-align: center; /* Centers the text */
-    }
-    
-    
+}
     
   
-  footer {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    position: fixed; /* Fix the footer */
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
+ h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
-  }
+}
   
   a {
     color: #007bff;
@@ -74,5 +60,21 @@
     text-decoration: none;
   }
   
+  .fade-in {
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 2s ease forwards; /* Animation properties */
+    animation-delay: 1s; /* Delay before starting */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+        transform: translateY(20px); /* Optional: Start slightly below */
+    }
+    to {
+        opacity: 1; /* End with opacity 1 */
+        transform: translateY(0); /* Move to original position */
+    }
+}
  
   

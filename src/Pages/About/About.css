@@ -1,20 +1,32 @@
-.about-container {
-    max-width: 1100px;
-    margin-bottom: 250px;
-    padding: 20px;
+.about-container { 
+    margin-bottom: 60px;
+    margin-top: 60px;    
     background-color: #ffffff;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    height: 80vh; /* Maintain the height for the container */
+    overflow: hidden; /* Prevent scrollbar for the container */
+}
+
+.about-content::-webkit-scrollbar {
+    display: none; 
+}
+.Heading{
+    padding: 20px;
 }
 
 .about-content {
     display: flex;
     justify-content: space-between;
+    padding: 0px 10%;
+    scrollbar-width: none;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .skills-container {
     flex: 1; 
-    margin-right: 20px; 
+    margin-left: 20px; 
 }
 
 .experience-container {
@@ -40,7 +52,7 @@
 }
 
 .progress-done {
-    background: #f05a28;
+    background: #f0a228;
     border-radius: 5px;
     height: 100%;
     width: 0%; /* This will be animated */
@@ -50,12 +62,15 @@
 /* Adjust the position of the progress text */
 .progress-text {
     position: absolute;
-    left: 50%;
+    left: 100%;
     transform: translateX(-50%);
     bottom: 20px; /* Adjust to place it above the bar */
     font-size: 14px; /* Adjust font size as needed */
     color: #333; /* Color for the percentage text */
     font-weight: bold; /* Make text bold for better visibility */
+}
+::-webkit-scrollbar {
+    display: none; 
 }
 
 .skill-name {
@@ -64,8 +79,6 @@
 }
 
 h1, h2 {
-    color: #ffffff;
-    text-align: left;
     margin-bottom: 1.5rem;
 }
 
