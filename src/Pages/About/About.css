@@ -12,18 +12,19 @@
     display: none; 
 }
 .Heading{
-    padding: 20px;
+    padding-top: 20px;
 }
 
 .about-content {
     display: flex;
     justify-content: space-between;
     padding: 0px 10%;
-    scrollbar-width: none;
     height: 100%;
     overflow-y: auto;
 }
-
+.experience-card:last-child{
+    margin-bottom: 150px;
+}
 .skills-container {
     flex: 1; 
     margin-left: 20px; 

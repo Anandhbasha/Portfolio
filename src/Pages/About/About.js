@@ -113,12 +113,28 @@ const About = () => {
         { name: 'InVision', percentage: 60 },
         { name: 'Bootstrap', percentage: 80 },
     ];
+    const [visible, setVisible] = useState(false);
+
+    const handleScroll = () => {
+        const aboutContainer = document.querySelector('.about-content');
+        const { top } = aboutContainer.getBoundingClientRect();
+
+        if (top < window.innerHeight) {
+            setVisible(true);
+            window.removeEventListener('scroll', handleScroll); 
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
         <div className="about-container">
             <h1 className='Heading'>About Me</h1>
-            <div className="about-content">
-            <div className="experience-container">
+            <div className={`about-content fade-in ${visible ? 'visible' : ''}`}>
+                <div className="experience-container">
                     <h2>Experience</h2>
                     <div className="cards-container">
                         {jobs.map((job, index) => (
@@ -132,7 +148,6 @@ const About = () => {
                         <SkillBar key={index} skill={skill.name} percentage={skill.percentage} />
                     ))}
                 </div>
-                
             </div>
         </div>
     );

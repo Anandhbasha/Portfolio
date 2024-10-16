@@ -9,16 +9,7 @@
   
   nav ul li {
     margin: 0;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav ul li a:hover {
-    text-decoration: underline;
+    list-style-type: none;
   }
   
   main {   
@@ -36,7 +27,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        background: linear-gradient(rgba(0, 0, 0, 0.826), rgba(0, 0, 0, 0.721)),
                     url('../../Images/DALL·E\ 2024-10-16\ 13.41.37\ -\ A\ visual\ representation\ of\ a\ creative\ individual\ who\ is\ both\ a\ designer\,\ developer\,\ and\ skilled\ in\ teaching.\ The\ image\ should\ depict\ elements\ that\ rep.webp');
         background-size: cover; /* Ensures the image covers the entire area */
         background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -49,17 +40,7 @@
  h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
-}
-  
-  a {
-    color: #007bff;
-  }
-  
-  a:hover {
-    color: #0056b3;
-    text-decoration: none;
-  }
-  
+}  
   .fade-in {
     opacity: 0; /* Start invisible */
     animation: fadeIn 2s ease forwards; /* Animation properties */

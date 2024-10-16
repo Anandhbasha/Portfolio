@@ -1,0 +1,23 @@
+.container_contact{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.icon-link {
+    margin-right: 10px; /* Space between text and icon */
+    color: #0077b5; /* LinkedIn color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .icon-link:hover {
+    color: #005582; /* Darker shade on hover */
+  }
+  
+  /* Specific styling for the email icon */
+  .icon-link i.fas.fa-envelope {
+    color: #db4437; /* Gmail color */
+  }
+  
